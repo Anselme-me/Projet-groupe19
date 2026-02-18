@@ -1,0 +1,164 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4ece2;
+    color: #3e3e3e;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CONTENEUR CV */
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px; /* pour laisser espace au header/navbar */
+}
+
+/* PHOTO DE PROFIL */
+.photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #e2c28d;
+    overflow: hidden;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* LOGO DE L'ÉCOLE */
+.photo-logo {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 30px auto;
+}
+
+.photo-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* NOM */
+.name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8c6a4a;
+    margin-bottom: 20px;
+}
+
+/* NAVIGATION */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #fffaf0;
+    background-color: #a1866f;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #e2c28d;
+    color: #3e3e3e;
+}
+
+/* SECTIONS */
+section {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fffaf0;
+    border-left: 6px solid #e2c28d;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 15px;
+}
+
+section p, section li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* GRID POUR CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fffaf0;
+    border: 2px solid #e2c28d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #3e3e3e;
+    padding: 15px;
+}
+
+.card p {
+    padding: 0 15px 15px 15px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #8c6a4a;
+    color: #fffaf0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* MEDIA QUERIES */
+@media(max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        top: 60px;
+        gap: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
